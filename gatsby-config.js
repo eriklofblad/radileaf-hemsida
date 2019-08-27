@@ -1,8 +1,22 @@
 module.exports = {
   siteMetadata: {
     title: `Radileaf`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Radileaf, specialisten inom radiologiska webtjänster`,
+    author: `@eriklofblad`,
+    menuLinks: [
+      {
+        name: "Hem",
+        link: "/",
+      },
+      {
+        name: "Produkter",
+        link: "/produkter/",
+      },
+      {
+        name: "Om",
+        link: "/om/",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +41,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    { resolve: "gatsby-plugin-styled-components" },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
