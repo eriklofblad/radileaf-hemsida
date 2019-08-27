@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 const ProductsPage = () => {
   return (
     <Layout>
-      <SEO title="produkter" />
+      <SEO title="Produkter" />
       <h1>Produkter</h1>
     </Layout>
   )
