@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Container, FlexContainer } from "."
 
 const Nav = styled.nav`
   margin: 0 auto;
@@ -11,14 +12,18 @@ const Nav = styled.nav`
 `
 
 const Header = styled.header`
-  background: darkblue;
-  margin-bottom: 1.45rem;
+  background: ${({ theme }) => theme.palette.main};
+  border-bottom: 1px solid lightgray;
+  color: ${({ theme }) => theme.palette.textColor};
+  /* margin-bottom: 1.45rem; */
 `
 
 const NavBar: React.FC = ({ children }) => {
   return (
     <Header>
-      <Nav>{children}</Nav>
+      <Container>
+        <FlexContainer justifyContent="space-between">{children}</FlexContainer>
+      </Container>
     </Header>
   )
 }

@@ -1,7 +1,7 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { NavButton, NavBar } from "./building-blocks"
+import { NavButton, NavBar, NavLogo } from "./building-blocks"
 import Img, { FixedObject } from "gatsby-image"
 
 interface IHeaderQuery {
@@ -41,18 +41,11 @@ const Header: React.FC<{ siteTitle: string }> = ({ siteTitle = "" }) => {
   return (
     <NavBar>
       <div style={{ display: "flex", alignItems: "flex-end" }}>
-        <Img fixed={data.radileafLogo.childImageSharp.fixed} />
-        <h1 style={{ margin: "0px 20px 0px 0px" }}>
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
+        <Img
+          fixed={data.radileafLogo.childImageSharp.fixed}
+          style={{ marginBottom: "-5px" }}
+        />
+        <NavLogo to="/">{siteTitle}</NavLogo>
       </div>
 
       <div style={{ display: "flex" }}>
