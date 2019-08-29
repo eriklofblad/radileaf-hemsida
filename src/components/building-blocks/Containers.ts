@@ -19,8 +19,12 @@ interface IFlexContainerProps {
 
 export const FlexContainer = styled.div<IFlexContainerProps>`
   display: flex;
-  flex-direction: row;
-  align-items: ${({ alignItems }) => (alignItems ? alignItems : "flex-end")};
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 500px) {
+    flex-direction: row;
+    align-items: ${({ alignItems }) => (alignItems ? alignItems : "flex-end")};
+  }
   justify-content: ${({ justifyContent }) =>
     justifyContent ? justifyContent : "flex-start"};
 `

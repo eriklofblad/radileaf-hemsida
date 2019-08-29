@@ -6,7 +6,7 @@ export const NavButton = styled(Link)`
   color: ${({ color = "black" }) => color};
   font-family: "Raleway", sans-serif;
   font-size: 1.3rem;
-  margin: 0px 10px;
+  margin: 5px 10px;
   font-weight: 300;
 `
 export const NavLogo = styled(Link)`
@@ -14,6 +14,7 @@ export const NavLogo = styled(Link)`
   font-family: "Raleway", sans-serif;
   color: ${({ color = "black" }) => color};
   text-decoration: none;
-  margin: 0px 10px;
+  margin: 5px 10px;
   font-weight: 600;
+  line-height: 2rem;
 `
