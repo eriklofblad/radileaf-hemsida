@@ -63,12 +63,21 @@ const Header: React.FC<{ siteTitle: string }> = ({ siteTitle = "" }) => {
 
   return (
     <NavBar>
-      <div style={{ display: "flex", alignItems: "flex-end" }}>
-        <Img
-          fixed={data.radileafLogo.childImageSharp.fixed}
-          // style={{ marginBottom: "-5px" }}
-        />
-        <NavLogo to="/">{siteTitle}</NavLogo>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "flex-end",
+          justifyContent: "space-between",
+          width: "90%",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "flex-end" }}>
+          <Img
+            fixed={data.radileafLogo.childImageSharp.fixed}
+            // style={{ marginBottom: "-5px" }}
+          />
+          <NavLogo to="/">{siteTitle}</NavLogo>
+        </div>
         <OpenMenuButton onClick={() => setOpenMenu(!openMenu)}>
           {openMenu ? "Stäng" : "Öppna"}
         </OpenMenuButton>
